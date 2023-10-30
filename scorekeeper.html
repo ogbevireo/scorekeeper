@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Score Keeper</title>
+</head>
+
+<body>
+
+  <section>
+    <div></div>
+    <div>
+      <h1><span id="p1Display">0</span>-<span id="p2Display">0</span></h1>
+      Use the buttons below to keep score.
+      <p>
+        <label for="playingto">Playing To</label>
+        <select name="playingto" id="playingto">
+          <option value="three">3</option>
+          <option value="five">5</option>
+          <option value="seven">7</option>
+          <option value="nine">9</option>
+          <option value="eleven">11</option>
+        </select>
+      </p>
+    </div>
+    <div>
+      <button id="p1Button">+1 Player One</button>
+      <button id="p2Button">+1 Player Two</button>
+      <button id="reset">Reset</button>
+    </div>
+  </section>
+
+  <script src="scorekeeper.js"></script>
+</body>
+
+</html>
