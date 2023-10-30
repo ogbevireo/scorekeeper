@@ -9,29 +9,49 @@
 </head>
 
 <body>
+  <section class="section">
+    <div class="card">
+      <header class="card-header title is-1">
+        <p class="card-header-title">
+          Game Score Keeper
+        </p>
+        <button class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <p class="card-header-title">
+            <span id="p1Display">0</span>-<span id="p2Display">0</span>
+          </p>
+          <p>Use the buttons below to keep score.</p>
 
-  <section>
-    <div></div>
-    <div>
-      <h1><span id="p1Display">0</span>-<span id="p2Display">0</span></h1>
-      Use the buttons below to keep score.
-      <p>
-        <label for="playingto">Playing To</label>
-        <select name="playingto" id="playingto">
-          <option value="3">3</option>
-          <option value="5">5</option>
-          <option value="7">7</option>
-          <option value="9">9</option>
-          <option value="11">11</option>
-        </select>
-      </p>
-    </div>
-    <div>
-      <button id="p1Button">+1 Player One</button>
-      <button id="p2Button">+1 Player Two</button>
-      <button id="reset">Reset</button>
+          <br>
+          <div class="select is-rounded">
+            <label for="playingto">Playing To</label>
+            <select name="playingto" id="playingto">
+              <option value="3">3</option>
+              <option value="5">5</option>
+              <option value="7">7</option>
+              <option value="9">9</option>
+              <option value="11">11</option>
+            </select>
+          </div>
+
+        </div>
+      </div>
+      <footer class="card-footer">
+        <button class="card-footer-item button is-primary" id="p1Button" class="">+1 Player One</a>
+          <button class="card-footer-item button is-info" id="p2Button" class="">+1 Player Two</a>
+            <button class="card-footer-item button is-danger" id="reset" class="">Reset</a>
+      </footer>
     </div>
   </section>
+
+
+
 
   <script src="scorekeeper.js"></script>
 </body>
