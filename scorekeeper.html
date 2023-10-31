@@ -10,43 +10,51 @@
 
 <body>
   <section class="section">
-    <div class="card">
-      <header class="card-header title is-1">
-        <p class="card-header-title">
-          Game Score Keeper
-        </p>
-        <button class="card-header-icon" aria-label="more options">
-          <span class="icon">
-            <i class="fas fa-angle-down" aria-hidden="true"></i>
-          </span>
-        </button>
-      </header>
-      <div class="card-content">
-        <div class="content">
-          <p class="card-header-title">
-            <span id="p1Display">0</span>-<span id="p2Display">0</span>
-          </p>
-          <p>Use the buttons below to keep score.</p>
+    <div class="container">
+      <div class="columns">
+        <div class="card column is-half is-offset-one-quarter">
+          <div class="card-image">
+            <figure class="image is-2by1">
+              <img
+                src="https://images.unsplash.com/photo-1604948501466-4e9c339b9c24?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hlc3N8ZW58MHx8MHx8fDA%3D"
+                alt="">
+            </figure>
+          </div>
+          <header class="card-header title is-1">
+            <p class="card-header-title">
+              Game Score Keeper
+            </p>
 
-          <br>
-          <div class="select is-rounded">
-            <label for="playingto">Playing To</label>
-            <select name="playingto" id="playingto">
-              <option value="3">3</option>
-              <option value="5">5</option>
-              <option value="7">7</option>
-              <option value="9">9</option>
-              <option value="11">11</option>
-            </select>
+          </header>
+          <div class="card-content column">
+            <div class="content is-size-2">
+              <h1 class="has-text-centered has-text-weight-bold">
+                <span id="p1Display">0</span>-<span id="p2Display">0</span>
+              </h1>
+            </div>
+            <div class="content">
+              <p class="subtitle">Use the buttons below to keep score.</p>
+              <label for="playingto" class="label is-large is-inline">Playing To</label>
+              <div class="select is-rounded">
+                <select name="playingto" id="playingto">
+                  <option value="3">3</option>
+                  <option value="5">5</option>
+                  <option value="7">7</option>
+                  <option value="9">9</option>
+                  <option value="11">11</option>
+                </select>
+              </div>
+
+            </div>
           </div>
 
+          <footer class="card-footer">
+            <button class="card-footer-item button is-primary is-large" id="p1Button" class="">+1 Player One</a>
+              <button class="card-footer-item button is-info is-large" id="p2Button" class="">+1 Player Two</a>
+                <button class="card-footer-item button is-danger is-large" id="reset" class="">Reset</a>
+          </footer>
         </div>
       </div>
-      <footer class="card-footer">
-        <button class="card-footer-item button is-primary" id="p1Button" class="">+1 Player One</a>
-          <button class="card-footer-item button is-info" id="p2Button" class="">+1 Player Two</a>
-            <button class="card-footer-item button is-danger" id="reset" class="">Reset</a>
-      </footer>
     </div>
   </section>
 
