@@ -1,42 +1,45 @@
-const p1Button = document.querySelector('#p1Button');
-const p2Button = document.querySelector('#p2Button');
-const p1Display = document.querySelector('#p1Display');
-const p2Display = document.querySelector('#p2Display');
+//refactor code to be more efficient by using objects to group variables
+const playerOne = {
+  score: 0,
+  button: document.querySelector('#p1Button'),
+  display: document.querySelector('#p1Display')
+}
+
+const playerTwo = {
+  score: 0,
+  button: document.querySelector('#p2Button'),
+  display: document.querySelector('#p2Display')
+}
+
+
 const resetButton = document.querySelector('#reset')
 const selectWinningScore = document.querySelector('#playingto')
 
-let p1Score = 0;
-let p2Score = 0;
+
 let winningScore = 3;
 let isGameOver = false
 
-p1Button.addEventListener('click', function () {
+function updateScores(player, opponent) {
   if (!isGameOver) {
-    p1Score += 1;
-    if (p1Score === winningScore) {
+    player.score += 1;
+    if (player.score === winningScore) {
       isGameOver = true
       //style for winner and has-text-danger
-      p1Display.classList.add('has-text-success')
-      p2Display.classList.add('has-text-danger')
-      p1Button.disabled = true;
-      p2Button.disabled = true;
+      player.display.classList.add('has-text-success')
+      opponent.display.classList.add('has-text-danger')
+      player.button.disabled = true;
+      opponent.button.disabled = true;
     }
-    p1Display.textContent = p1Score;
+    player.display.textContent = player.score;
   }
+}
+
+playerOne.button.addEventListener('click', function () {
+  updateScores(playerOne, playerTwo)
 })
 
-p2Button.addEventListener('click', function () {
-  if (!isGameOver) {
-    p2Score += 1;
-    if (p2Score === winningScore) {
-      isGameOver = true
-      p2Display.classList.add('has-text-success')
-      p1Display.classList.add('has-text-danger')
-      p1Button.disabled = true;
-      p2Button.disabled = true;
-    }
-    p2Display.textContent = p2Score;
-  }
+playerTwo.button.addEventListener('click', function () {
+  updateScores(playerTwo, playerOne)
 })
 
 selectWinningScore.addEventListener('change', function () {
