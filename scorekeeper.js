@@ -52,12 +52,10 @@ resetButton.addEventListener('click', reset)
 
 function reset() {
   isGameOver = false;
-  p1Score = 0;
-  p2Score = 0;
-  p1Display.textContent = 0;
-  p2Display.textContent = 0;
-  p1Display.classList.remove('has-text-success', 'has-text-danger')
-  p2Display.classList.remove('has-text-success', 'has-text-danger')
-  p1Button.disabled = false;
-  p2Button.disabled = false;
+  for (let p of [playerOne, playerTwo]) {
+    p.score = 0;
+    p.display.textContent = 0;
+    p.display.classList.remove('has-text-success', 'has-text-danger')
+    p.button.disabled = false;
+  }
 }
